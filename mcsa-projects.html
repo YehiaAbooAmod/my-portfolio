@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MCSA Projects - BO3MOD</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #121212;
+      color: #e0e0e0;
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #1f1f1f;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    }
+    header h1 {
+      color: #ff9800;
+      font-size: 26px;
+    }
+    section {
+      padding: 50px;
+    }
+    h2 {
+      color: #ff9800;
+      margin-bottom: 20px;
+      font-size: 24px;
+      text-align: center;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background-color: #1f1f1f;
+      padding: 20px;
+      border-radius: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(255,152,0,0.4);
+    }
+    .card h3 {
+      color: #ff9800;
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+    .card p {
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    a.back {
+      display: inline-block;
+      margin-top: 40px;
+      color: #ff9800;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+    a.back:hover {
+      color: #ffa733;
+    }
+
+    /* تابلت */
+    @media (max-width: 768px) {
+      section { padding: 30px; }
+      h2 { font-size: 20px; }
+      .card { font-size: 14px; }
+    }
+
+    /* موبايل صغير */
+    @media (max-width: 480px) {
+      header h1 { font-size: 20px; }
+      h2 { font-size: 18px; }
+      .card { font-size: 13px; padding: 15px; }
+      .card h3 { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MCSA Projects</h1>
+  </header>
+
+  <section>
+    <h2>Projects List</h2>
+    <div class="cards">
+      
+      <!-- Active Directory -->
+      <a href="ad-setup.html" class="card">
+        <h3>Active Directory Setup</h3>
+        <p>
+          Installing and configuring AD DS, creating users, groups, and Organizational Units (OUs)
+          to manage resources efficiently across the domain.
+        </p>
+      </a>
+
+      <!-- Group Policy + File Sharing -->
+      <a href="group-policy.html" class="card">
+        <h3>Group Policy & File Sharing Management</h3>
+        <p>
+          Configured GPOs for security and software deployment.  
+          Set up shared folders, mounted drives, and managed share + NTFS permissions for different user roles.
+        </p>
+      </a>
+
+      <!-- DNS & DHCP -->
+      <a href="dhcp-project.html" class="card">
+        <h3>DNS & DHCP Configuration</h3>
+        <p>
+          Implemented DNS zones, DHCP scopes, and ensured name resolution and IP allocation across the network.
+        </p>
+      </a>
+
+      <!-- File Server -->
+      <a href="file-server.html" class="card">
+        <h3>File Server & Permissions</h3>
+        <p>
+          Configured file server shares, managed permissions, and tested access control for multiple departments.
+        </p>
+      </a>
+    </div>
+
+    <a href="index.html" class="back">⬅ Back to Portfolio</a>
+  </section>
+</body>
+</html>
