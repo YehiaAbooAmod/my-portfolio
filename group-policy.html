@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Group Policy & File Sharing Management - BO3MOD</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+ body {
+      background-color: #121212;
+      color: #e0e0e0;
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    header {
+      background-color: #1f1f1f;
+      padding: 20px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    header h1 { color: #ff9800; }
+    h2 { color: #ff9800; margin-top: 30px; margin-bottom: 15px; }
+    ul { margin-left: 20px; margin-bottom: 20px; }
+    ul li { margin-bottom: 8px; }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #1f1f1f;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 8px 20px rgba(255,152,0,0.4);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      transition: transform 0.3s;
+    }
+    .card img:hover {
+      transform: scale(1.05);
+    }
+    .card p {
+      font-size: 14px;
+      line-height: 1.5;
+      color: #ccc;
+    }
+
+    a.back {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
+      background: #ff9800;
+      color: #121212;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.3s;
+    }
+    a.back:hover {
+      background: #e68a00;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Group Policy & File Sharing Management</h1>
+  </header>
+
+  <section>
+    <h2>Project Overview</h2>
+    <p>
+      This project focuses on configuring shared drives and managing access through Group Policy Objects (GPOs).
+      It demonstrates how to use GPOs to automatically map network drives, apply security restrictions, 
+      and deploy software from a shared source on a Windows Server environment.
+    </p>
+
+    <h2>Steps Completed</h2>
+    <ul>
+      <li>Created shared drives for <strong>Common</strong> and <strong>IT</strong> departments on the main server.</li>
+      <li>Set correct <strong>Share</strong> and <strong>NTFS permissions</strong> to restrict unauthorized access.</li>
+      <li>Configured two Group Policies — one for the IT OU and another for the Common OU.</li>
+      <li>Mapped each shared drive automatically using Group Policy preferences.</li>
+      <li>Created an additional policy named <strong>7zip</strong> for software deployment from the shared folder.</li>
+      <li>Verified GPOs on client machines ensuring all mapped drives and deployments work correctly.</li>
+    </ul>
+
+    <h2>Screenshots & Explanations</h2>
+    <div class="gallery">
+
+      <div class="card">
+        <img src="./images/file-share-1.png" alt="Creating Common Share">
+        <p>Creating the <strong>Common</strong> shared drive on the server with proper access permissions.</p>
+      </div>
+
+      <div class="card">
+        <img src="./images/file-share-2.png" alt="Creating IT Share">
+        <p>Creating the <strong>IT</strong> shared drive separately for the IT department’s internal files.</p>
+      </div>
+
+      <div class="card">
+        <img src="./images/file-share-3.png" alt="Group Policy Configuration">
+        <p>Configuring Group Policies for both Common and IT shares, each applied to its corresponding OU.</p>
+      </div>
+
+      <div class="card">
+        <img src="./images/file-share-4.png" alt="Drives on Client Machine">
+        <p>Verifying both shared drives are mapped correctly and appear on the client machine.</p>
+      </div>
+
+      <div class="card">
+        <img src="./images/file-share-5.png" alt="IT Drive Access Test">
+        <p>Testing access restrictions — only members of the IT group can open the IT shared drive.</p>
+      </div>
+
+      <div class="card">
+        <img src="./images/file-share-6.png" alt="All Policies Overview">
+        <p>Overview of all created policies, including the <strong>7zip</strong> deployment policy, correctly linked and active.</p>
+      </div>
+
+    </div>
+
+    <a href="mcsa-projects.html" class="back">⬅ Back to MCSA Projects</a>
+  </section>
+</body>
+</html>
